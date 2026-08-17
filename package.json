@@ -1,0 +1,42 @@
+{
+  "name": "learning-kanban",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "serve": "node server.cjs",
+    "setup-desktop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-desktop.ps1",
+    "setup-cjboard": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-cjboard-tauri.ps1",
+    "setup-tauri": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install-tauri-prereqs.ps1",
+    "desktop:tauri": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-tauri-dev.ps1",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@arco-design/web-react": "^2.66.16",
+    "@hello-pangea/dnd": "^18.0.1",
+    "@tauri-apps/api": "^2.11.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "echarts": "^6.1.0",
+    "echarts-for-react": "^3.0.6",
+    "lucide-react": "^1.27.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  }
+}

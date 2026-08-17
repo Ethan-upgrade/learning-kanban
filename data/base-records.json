@@ -1,0 +1,117 @@
+[
+  {
+    "id": "d9c11a8c-4355-4948-a639-b3285d057b98",
+    "company": "ByteDance",
+    "role": "Backend Intern",
+    "status": "applied",
+    "priority": "high",
+    "city": "Beijing",
+    "channel": "Campus portal",
+    "owner": "Novak",
+    "applyDate": "2026-08-10",
+    "deadline": "2026-08-23",
+    "nextAction": "Check written-test email and review OS basics",
+    "nextActionAt": "2026-08-14T19:30",
+    "salaryRange": "Intern package",
+    "tags": [
+      "Autumn Recruiting",
+      "Backend"
+    ],
+    "notes": "Track resume version, referral source, and next technical review.",
+    "link": "",
+    "createdAt": "2026-08-13T14:42:37.369Z",
+    "updatedAt": "2026-08-13T14:42:37.369Z"
+  },
+  {
+    "id": "1b6723f7-76f0-4b40-ba57-9a523cc94462",
+    "company": "Tencent",
+    "role": "ML Intern",
+    "status": "written",
+    "priority": "high",
+    "city": "Shenzhen",
+    "channel": "Referral",
+    "owner": "Novak",
+    "applyDate": "2026-08-06",
+    "deadline": "2026-08-18",
+    "nextAction": "Finish probability and ML evaluation practice",
+    "nextActionAt": "2026-08-13T21:00",
+    "salaryRange": "Negotiable",
+    "tags": [
+      "Autumn Recruiting",
+      "Machine Learning"
+    ],
+    "notes": "Prepare supervised learning, metrics, and Python implementation examples.",
+    "link": "",
+    "createdAt": "2026-08-13T14:42:37.369Z",
+    "updatedAt": "2026-08-13T14:42:37.369Z"
+  },
+  {
+    "id": "1876f866-971e-42d5-9ea9-59b7ff646954",
+    "company": "Alibaba",
+    "role": "Data Platform Intern",
+    "status": "interview",
+    "priority": "medium",
+    "city": "Hangzhou",
+    "channel": "Official website",
+    "owner": "Novak",
+    "applyDate": "2026-08-01",
+    "deadline": "2026-08-15",
+    "nextAction": "Prepare SQL, indexing, and project story",
+    "nextActionAt": "2026-08-13T16:00",
+    "salaryRange": "Intern package",
+    "tags": [
+      "Autumn Recruiting",
+      "Database"
+    ],
+    "notes": "Use STAR format for project explanation.",
+    "link": "",
+    "createdAt": "2026-08-13T14:42:37.369Z",
+    "updatedAt": "2026-08-13T14:42:37.369Z"
+  },
+  {
+    "id": "fee98a31-a0a9-4f71-b75f-859d63ae9474",
+    "company": "Microsoft",
+    "role": "Software Engineer Intern",
+    "status": "wishlist",
+    "priority": "medium",
+    "city": "Shanghai",
+    "channel": "Career site",
+    "owner": "Novak",
+    "applyDate": "2026-08-13",
+    "deadline": "2026-09-02",
+    "nextAction": "Polish English resume and algorithm practice set",
+    "nextActionAt": "2026-08-15T20:00",
+    "salaryRange": "Competitive",
+    "tags": [
+      "Autumn Recruiting",
+      "SWE"
+    ],
+    "notes": "Confirm opening requirements before submitting.",
+    "link": "",
+    "createdAt": "2026-08-13T14:42:37.369Z",
+    "updatedAt": "2026-08-13T14:42:37.369Z"
+  },
+  {
+    "id": "1567fb2f-20d9-4095-b099-1884c93b667e",
+    "company": "Meituan",
+    "role": "NLP Algorithm Intern",
+    "status": "offer",
+    "priority": "low",
+    "city": "Beijing",
+    "channel": "Campus talk",
+    "owner": "Novak",
+    "applyDate": "2026-07-24",
+    "deadline": "2026-08-20",
+    "nextAction": "Compare offer details and timeline",
+    "nextActionAt": "2026-08-16T18:00",
+    "salaryRange": "Offer pending details",
+    "tags": [
+      "Autumn Recruiting",
+      "NLP"
+    ],
+    "notes": "Keep decision criteria visible: growth, mentor, workload, conversion chance.",
+    "link": "",
+    "createdAt": "2026-08-13T14:42:37.369Z",
+    "updatedAt": "2026-08-13T14:42:37.369Z"
+  }
+]

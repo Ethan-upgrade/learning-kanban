@@ -1,0 +1,690 @@
+[
+  {
+    "id": "868a043e-dc5a-4502-9da3-badf0c23bf88",
+    "title": "Define learning goals and review rhythm",
+    "area": "Learning",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-08-14",
+    "dueDate": "2026-08-15",
+    "reminderAt": "2026-08-15T20:00",
+    "reminderMins": 120,
+    "estimateHours": 1.5,
+    "progress": 0,
+    "tags": [
+      "Goal Definition",
+      "Learning"
+    ],
+    "notes": "Define target skills, review cadence, and completion criteria.",
+    "checklist": [
+      {
+        "id": "b23f72fb-5548-4426-afe6-645dc3782344",
+        "text": "Choose 3 core topics",
+        "done": false
+      },
+      {
+        "id": "6f2a9da5-ff76-4cfe-8be3-1f44eaa34ed8",
+        "text": "Set weekly review time",
+        "done": false
+      }
+    ],
+    "createdAt": "2026-08-14T07:29:02.071Z"
+  },
+  {
+    "id": "4adfc320-6833-4312-a91e-a8a481e96273",
+    "title": "Collect learning inputs",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-15",
+    "dueDate": "2026-08-18",
+    "reminderAt": "2026-08-18T20:00",
+    "reminderMins": 120,
+    "estimateHours": 5,
+    "progress": 0,
+    "tags": [
+      "Input",
+      "Notes"
+    ],
+    "notes": "Collect readings, exercises, videos, and notes.",
+    "checklist": [],
+    "createdAt": "2026-08-14T07:29:02.071Z"
+  },
+  {
+    "id": "38bbe8ca-6b7b-4e6d-b6a4-fd5b67269181",
+    "title": "Build a practice project",
+    "area": "Project Practice",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-18",
+    "dueDate": "2026-08-22",
+    "reminderAt": "2026-08-22T20:00",
+    "reminderMins": 120,
+    "estimateHours": 8,
+    "progress": 0,
+    "tags": [
+      "Practice",
+      "Project Practice"
+    ],
+    "notes": "Turn concepts into a small working project.",
+    "checklist": [
+      {
+        "id": "32e9ac79-9bdd-4048-a9b8-605b013acf71",
+        "text": "Define input and output",
+        "done": false
+      },
+      {
+        "id": "97a5a56e-fa99-49e0-8090-a4b0b0f495b7",
+        "text": "Finish core function",
+        "done": false
+      },
+      {
+        "id": "5871d198-b5b4-4d71-b8cb-1e06c177684f",
+        "text": "Write notes",
+        "done": false
+      }
+    ],
+    "createdAt": "2026-08-14T07:29:02.071Z"
+  },
+  {
+    "id": "e0cb34d0-ca51-41a4-b0c7-e83200a34dfc",
+    "title": "Review mistakes and blockers",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-22",
+    "dueDate": "2026-08-23",
+    "reminderAt": "2026-08-23T20:00",
+    "reminderMins": 120,
+    "estimateHours": 2,
+    "progress": 0,
+    "tags": [
+      "Retrospective Archive",
+      "Review"
+    ],
+    "notes": "Record errors, blockers, and corrected understanding.",
+    "checklist": [],
+    "createdAt": "2026-08-14T07:29:02.071Z"
+  },
+  {
+    "id": "2fd21007-2973-4227-abca-ea961f4c2599",
+    "title": "Define learning goals and review rhythm",
+    "area": "Learning",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-08-03",
+    "dueDate": "2026-08-04",
+    "reminderAt": "2026-08-04T20:00",
+    "reminderMins": 120,
+    "estimateHours": 1.5,
+    "progress": 0,
+    "tags": [
+      "Goal Definition",
+      "Learning"
+    ],
+    "notes": "Define target skills, review cadence, and completion criteria.",
+    "checklist": [
+      {
+        "id": "70709d45-79a7-4fc8-a39d-4ca8fedfd9de",
+        "text": "Choose 3 core topics",
+        "done": false
+      },
+      {
+        "id": "23ef3887-fb44-440c-b7d7-e1dce48a8125",
+        "text": "Set weekly review time",
+        "done": false
+      }
+    ],
+    "createdAt": "2026-08-03T10:30:02.539Z",
+    "remindedAt": "2026-08-04T12:32:37.874Z"
+  },
+  {
+    "id": "e3a2161e-b12c-4e21-9a06-a224b6f82080",
+    "title": "Collect learning inputs",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-04",
+    "dueDate": "2026-08-07",
+    "reminderAt": "2026-08-07T20:00",
+    "reminderMins": 120,
+    "estimateHours": 5,
+    "progress": 0,
+    "tags": [
+      "Input",
+      "Notes"
+    ],
+    "notes": "Collect readings, exercises, videos, and notes.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:30:02.539Z",
+    "remindedAt": "2026-08-08T04:26:36.024Z"
+  },
+  {
+    "id": "4ce312e8-1cb3-4950-a9df-20caa3ad90b6",
+    "title": "Build a practice project",
+    "area": "Project Practice",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-07",
+    "dueDate": "2026-08-11",
+    "reminderAt": "2026-08-11T20:00",
+    "reminderMins": 120,
+    "estimateHours": 8,
+    "progress": 0,
+    "tags": [
+      "Practice",
+      "Project Practice"
+    ],
+    "notes": "Turn concepts into a small working project.",
+    "checklist": [
+      {
+        "id": "bd3f832d-c78b-4745-a780-ecfbd56d1218",
+        "text": "Define input and output",
+        "done": false
+      },
+      {
+        "id": "8917e421-219f-4b02-94be-e719cf55e087",
+        "text": "Finish core function",
+        "done": false
+      },
+      {
+        "id": "45de0d83-12fd-4e2a-9b88-d8861a72d217",
+        "text": "Write notes",
+        "done": false
+      }
+    ],
+    "createdAt": "2026-08-03T10:30:02.539Z",
+    "remindedAt": "2026-08-13T13:39:55.822Z"
+  },
+  {
+    "id": "fb273478-4aba-4163-808b-2da005710a51",
+    "title": "Review mistakes and blockers",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-11",
+    "dueDate": "2026-08-12",
+    "reminderAt": "2026-08-12T20:00",
+    "reminderMins": 120,
+    "estimateHours": 2,
+    "progress": 0,
+    "tags": [
+      "Retrospective Archive",
+      "Review"
+    ],
+    "notes": "Record errors, blockers, and corrected understanding.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:30:02.539Z",
+    "remindedAt": "2026-08-13T13:39:55.822Z"
+  },
+  {
+    "id": "461e1ec6-31b3-4c77-9030-e7f3bcb75217",
+    "title": "Collect sources and review requirements",
+    "area": "Learning",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-08-03",
+    "dueDate": "2026-08-05",
+    "reminderAt": "2026-08-05T20:00",
+    "reminderMins": 120,
+    "estimateHours": 4,
+    "progress": 0,
+    "tags": [
+      "Reading",
+      "Sources"
+    ],
+    "notes": "Read requirements, collect sources, and record citations.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:58.592Z",
+    "remindedAt": "2026-08-05T14:25:48.702Z"
+  },
+  {
+    "id": "c812761f-6997-457a-9958-fe55d2e56c39",
+    "title": "Design outline and argument",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-05",
+    "dueDate": "2026-08-06",
+    "reminderAt": "2026-08-06T20:00",
+    "reminderMins": 120,
+    "estimateHours": 3,
+    "progress": 0,
+    "tags": [
+      "Goal Definition",
+      "Outline"
+    ],
+    "notes": "Decide the thesis, structure, and supporting evidence.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:58.592Z",
+    "remindedAt": "2026-08-08T04:26:36.025Z"
+  },
+  {
+    "id": "5d9631c0-963b-4be2-b2fc-b6e7ca2b5c41",
+    "title": "Complete first draft",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-06",
+    "dueDate": "2026-08-09",
+    "reminderAt": "2026-08-09T20:00",
+    "reminderMins": 120,
+    "estimateHours": 8,
+    "progress": 0,
+    "tags": [
+      "Writing",
+      "Draft"
+    ],
+    "notes": "Complete the argument first, then refine the draft.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:58.592Z",
+    "remindedAt": "2026-08-09T16:20:37.221Z"
+  },
+  {
+    "id": "c1ca1d0f-328d-4f97-93fb-60390c725aeb",
+    "title": "Citations, proofreading, and submission",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-09",
+    "dueDate": "2026-08-10",
+    "reminderAt": "2026-08-10T20:00",
+    "reminderMins": 120,
+    "estimateHours": 3,
+    "progress": 0,
+    "tags": [
+      "Stage Review",
+      "Submission"
+    ],
+    "notes": "Check citations, format, spelling, and submission requirements.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:58.592Z",
+    "remindedAt": "2026-08-13T13:39:55.822Z"
+  },
+  {
+    "id": "395d847a-6754-46c0-83e5-71c50fd927f9",
+    "title": "Most important task today",
+    "area": "Schedule",
+    "status": "doing",
+    "priority": "high",
+    "startDate": "2026-08-03",
+    "dueDate": "2026-08-03",
+    "reminderAt": "2026-08-03T20:00",
+    "reminderMins": 120,
+    "estimateHours": 2,
+    "progress": 0,
+    "tags": [
+      "Today Focus"
+    ],
+    "notes": "Protect this item first today.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:57.740Z",
+    "remindedAt": "2026-08-03T12:00:09.543Z"
+  },
+  {
+    "id": "93fdcf16-6f31-4f94-be2e-e1907ecf5289",
+    "title": "Handle communication and admin",
+    "area": "Schedule",
+    "status": "week",
+    "priority": "medium",
+    "startDate": "2026-08-03",
+    "dueDate": "2026-08-03",
+    "reminderAt": "2026-08-03T20:00",
+    "reminderMins": 120,
+    "estimateHours": 1,
+    "progress": 0,
+    "tags": [
+      "Communication",
+      "Admin"
+    ],
+    "notes": "Handle messages, small admin tasks, and low-complexity items.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:57.740Z",
+    "remindedAt": "2026-08-03T12:00:09.543Z"
+  },
+  {
+    "id": "e6fd3db1-9e0d-4d3d-9b21-e8bd24cd7f35",
+    "title": "Evening review and tomorrow plan",
+    "area": "Schedule",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-03",
+    "dueDate": "2026-08-03",
+    "reminderAt": "2026-08-03T20:00",
+    "reminderMins": 120,
+    "estimateHours": 0.5,
+    "progress": 0,
+    "tags": [
+      "Retrospective Archive",
+      "Tomorrow Plan"
+    ],
+    "notes": "Review what was completed and choose tomorrow priorities.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:57.740Z",
+    "remindedAt": "2026-08-03T12:00:09.543Z"
+  },
+  {
+    "id": "b53a9b5f-16b7-4eff-a2c3-47b6ad88587f",
+    "title": "Collect sources and review requirements",
+    "area": "Learning",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-08-03",
+    "dueDate": "2026-08-05",
+    "reminderAt": "2026-08-05T20:00",
+    "reminderMins": 120,
+    "estimateHours": 4,
+    "progress": 0,
+    "tags": [
+      "Reading",
+      "Sources"
+    ],
+    "notes": "Read requirements, collect sources, and record citations.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:57.120Z",
+    "remindedAt": "2026-08-05T14:25:48.702Z"
+  },
+  {
+    "id": "f6e95d80-4d0d-48f1-8ac9-d48cb1e59e51",
+    "title": "Design outline and argument",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-05",
+    "dueDate": "2026-08-06",
+    "reminderAt": "2026-08-06T20:00",
+    "reminderMins": 120,
+    "estimateHours": 3,
+    "progress": 0,
+    "tags": [
+      "Goal Definition",
+      "Outline"
+    ],
+    "notes": "Decide the thesis, structure, and supporting evidence.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:57.120Z",
+    "remindedAt": "2026-08-08T04:26:36.025Z"
+  },
+  {
+    "id": "034a6433-9671-4909-aa12-f9a3593e2fd9",
+    "title": "Complete first draft",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-06",
+    "dueDate": "2026-08-09",
+    "reminderAt": "2026-08-09T20:00",
+    "reminderMins": 120,
+    "estimateHours": 8,
+    "progress": 0,
+    "tags": [
+      "Writing",
+      "Draft"
+    ],
+    "notes": "Complete the argument first, then refine the draft.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:57.120Z",
+    "remindedAt": "2026-08-09T16:20:37.221Z"
+  },
+  {
+    "id": "7443d114-2679-491f-ba82-4cca8af0d96b",
+    "title": "Citations, proofreading, and submission",
+    "area": "Learning",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-09",
+    "dueDate": "2026-08-10",
+    "reminderAt": "2026-08-10T20:00",
+    "reminderMins": 120,
+    "estimateHours": 3,
+    "progress": 0,
+    "tags": [
+      "Stage Review",
+      "Submission"
+    ],
+    "notes": "Check citations, format, spelling, and submission requirements.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:57.120Z",
+    "remindedAt": "2026-08-13T13:39:55.822Z"
+  },
+  {
+    "id": "b839d698-2905-4f25-8209-23c49f684df6",
+    "title": "Project requirements",
+    "area": "Project",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-08-03",
+    "dueDate": "2026-08-04",
+    "reminderAt": "2026-08-04T20:00",
+    "reminderMins": 120,
+    "estimateHours": 2,
+    "progress": 0,
+    "tags": [
+      "Goal Definition",
+      "Requirements"
+    ],
+    "notes": "Clarify users, scenarios, scope, and review criteria.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:54.012Z",
+    "remindedAt": "2026-08-04T12:32:37.874Z"
+  },
+  {
+    "id": "b9b17e84-9adc-4470-ac75-5d6b12208be8",
+    "title": "Break work into deliverable tasks",
+    "area": "Project",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-04",
+    "dueDate": "2026-08-05",
+    "reminderAt": "2026-08-05T20:00",
+    "reminderMins": 120,
+    "estimateHours": 3,
+    "progress": 0,
+    "tags": [
+      "Task Breakdown",
+      "Schedule Execution"
+    ],
+    "notes": "Split work into tasks that can be finished in 0.5 to 2 hours.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:54.012Z",
+    "remindedAt": "2026-08-05T14:25:48.702Z"
+  },
+  {
+    "id": "2dac9425-a3cd-42f1-bac1-a5431331cb00",
+    "title": "Build core functionality",
+    "area": "Project",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-08-05",
+    "dueDate": "2026-08-10",
+    "reminderAt": "2026-08-10T20:00",
+    "reminderMins": 120,
+    "estimateHours": 12,
+    "progress": 0,
+    "tags": [
+      "Execution",
+      "Development"
+    ],
+    "notes": "Implement the main workflow and save evidence.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:54.012Z",
+    "remindedAt": "2026-08-13T13:39:55.822Z"
+  },
+  {
+    "id": "68e8a85e-6f90-4518-b22d-9fff3e014403",
+    "title": "Review, fix, and release",
+    "area": "Project",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-10",
+    "dueDate": "2026-08-12",
+    "reminderAt": "2026-08-12T20:00",
+    "reminderMins": 120,
+    "estimateHours": 4,
+    "progress": 0,
+    "tags": [
+      "Stage Review",
+      "Release"
+    ],
+    "notes": "Test behavior, fix issues, and prepare the handoff.",
+    "checklist": [],
+    "createdAt": "2026-08-03T10:29:54.012Z",
+    "remindedAt": "2026-08-13T13:39:55.822Z"
+  },
+  {
+    "id": "project-requirements",
+    "title": "Project requirements",
+    "area": "Project",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-07-30",
+    "dueDate": "2026-07-31",
+    "reminderAt": "2026-07-31T20:00",
+    "reminderMins": 120,
+    "estimateHours": 2,
+    "progress": 0,
+    "tags": [
+      "Goal Definition",
+      "Requirements"
+    ],
+    "notes": "Clarify users, scenarios, scope, and review criteria.",
+    "checklist": [],
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "remindedAt": "2026-08-01T14:20:32.709Z"
+  },
+  {
+    "id": "task-breakdown",
+    "title": "Break work into deliverable tasks",
+    "area": "Project",
+    "status": "backlog",
+    "priority": "high",
+    "startDate": "2026-07-31",
+    "dueDate": "2026-08-01",
+    "reminderAt": "2026-08-01T20:00",
+    "reminderMins": 120,
+    "estimateHours": 3,
+    "progress": 0,
+    "tags": [
+      "Task Breakdown",
+      "Schedule Execution"
+    ],
+    "notes": "Split work into tasks that can be finished in 0.5 to 2 hours.",
+    "checklist": [],
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "remindedAt": "2026-08-01T14:20:32.710Z"
+  },
+  {
+    "id": "learning-environment",
+    "title": "Set up learning environment and editor",
+    "area": "Computer Science Basics",
+    "status": "doing",
+    "priority": "high",
+    "startDate": "2026-07-30",
+    "dueDate": "2026-07-31",
+    "reminderAt": "2026-07-31T09:00",
+    "reminderMins": 120,
+    "estimateHours": 2,
+    "progress": 35,
+    "tags": [
+      "Git",
+      "VS Code",
+      "Environment"
+    ],
+    "notes": "Install Python, C++ tooling, PostgreSQL, Node, and Git.",
+    "checklist": [
+      {
+        "id": "learning-folder",
+        "text": "Create learning folders",
+        "done": true
+      },
+      {
+        "id": "python-venv",
+        "text": "Verify Python virtual environment",
+        "done": false
+      }
+    ],
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "remindedAt": "2026-08-01T14:20:32.710Z"
+  },
+  {
+    "id": "python-word-frequency",
+    "title": "Python word frequency counter",
+    "area": "Python",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-07-31",
+    "dueDate": "2026-08-02",
+    "reminderAt": "2026-08-02T20:30",
+    "reminderMins": 180,
+    "estimateHours": 3,
+    "progress": 0,
+    "tags": [
+      "File IO",
+      "dict",
+      "CLI"
+    ],
+    "notes": "Read a txt file and print the top 20 words.",
+    "checklist": [
+      {
+        "id": "read-file",
+        "text": "Read file input",
+        "done": false
+      },
+      {
+        "id": "clean-text",
+        "text": "Clean punctuation and casing",
+        "done": false
+      },
+      {
+        "id": "sort-output",
+        "text": "Sort and output results",
+        "done": false
+      }
+    ],
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "remindedAt": "2026-08-03T03:34:50.737Z"
+  },
+  {
+    "id": "algorithm-arrays-hash",
+    "title": "Algorithms: 10 array and hash table exercises",
+    "area": "Algorithms",
+    "status": "week",
+    "priority": "high",
+    "startDate": "2026-08-01",
+    "dueDate": "2026-08-04",
+    "reminderAt": "2026-08-04T21:00",
+    "reminderMins": 120,
+    "estimateHours": 5,
+    "progress": 10,
+    "tags": [
+      "LeetCode",
+      "Complexity"
+    ],
+    "notes": "Solve problems, record time complexity and space complexity.",
+    "checklist": [],
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "remindedAt": "2026-08-05T06:43:00.807Z"
+  },
+  {
+    "id": "ml-classification",
+    "title": "Machine Learning: First classification model",
+    "area": "Machine Learning",
+    "status": "backlog",
+    "priority": "medium",
+    "startDate": "2026-08-06",
+    "dueDate": "2026-08-13",
+    "reminderAt": "2026-08-09T20:00",
+    "reminderMins": 360,
+    "estimateHours": 4,
+    "progress": 0,
+    "tags": [
+      "scikit-learn",
+      "Classification",
+      "Evaluation"
+    ],
+    "notes": "Train a model and compare accuracy, precision, and recall.",
+    "checklist": [],
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "remindedAt": "2026-08-09T16:20:37.221Z"
+  }
+]

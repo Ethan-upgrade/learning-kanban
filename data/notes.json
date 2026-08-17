@@ -1,0 +1,75 @@
+[
+  {
+    "id": "1c786277-488a-4f1e-8983-f15702da2578",
+    "title": "Untitled Note",
+    "content": "# Untitled Note\n\nStart writing here.",
+    "tags": [
+      "Draft"
+    ],
+    "linkedTaskIds": [
+      "2fd21007-2973-4227-abca-ea961f4c2599"
+    ],
+    "pinned": false,
+    "createdAt": "2026-08-13T13:51:25.636Z",
+    "updatedAt": "2026-08-13T13:51:25.636Z"
+  },
+  {
+    "id": "knowledge-home",
+    "title": "Knowledge Home",
+    "content": "# Knowledge Home\n\nA home note for learning plans, project notes, and schedule management.\n\nSuggested structure:\n- [[Computer Science Basics]]: Core concepts and fundamentals\n- [[Python Practice]]: Code snippets, error logs, and small projects\n- [[Project Planning]]: requirements, decisions, and delivery notes\n\nUse `[[Note Title]]` to create bidirectional links.",
+    "tags": [
+      "MOC",
+      "Index"
+    ],
+    "linkedTaskIds": [],
+    "pinned": true,
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "updatedAt": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "computer-science-basics",
+    "title": "Computer Science Basics",
+    "content": "# Computer Science Basics\n\nCore question: How do computers execute programs?\n\nTopics to expand:\n- Operating systems\n- Networking\n- Data structures\n- Databases\n\nRelated: [[Python Practice]]",
+    "tags": [
+      "Learning",
+      "CS"
+    ],
+    "linkedTaskIds": [
+      "learning-environment"
+    ],
+    "pinned": false,
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "updatedAt": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "python-practice",
+    "title": "Python Practice",
+    "content": "# Python Practice\n\nUse this note for code snippets, error logs, and small project records.\n\nTemplate:\n- Context\n- Code\n- Error\n- Corrected understanding\n\nRelated: [[Computer Science Basics]]",
+    "tags": [
+      "Python",
+      "Practice"
+    ],
+    "linkedTaskIds": [
+      "python-word-frequency"
+    ],
+    "pinned": false,
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "updatedAt": "2026-07-30T00:00:00.000Z"
+  },
+  {
+    "id": "project-planning",
+    "title": "Project Planning",
+    "content": "# Project Planning\n\nProject decision checklist:\n\n1. What problem does this solve?\n2. Who will use it?\n3. What is the smallest useful version?\n4. How will success be checked?\n\nRelated: [[Knowledge Home]]",
+    "tags": [
+      "Decision",
+      "Project"
+    ],
+    "linkedTaskIds": [
+      "project-requirements",
+      "task-breakdown"
+    ],
+    "pinned": false,
+    "createdAt": "2026-07-30T00:00:00.000Z",
+    "updatedAt": "2026-07-30T00:00:00.000Z"
+  }
+]

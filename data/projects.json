@@ -1,0 +1,66 @@
+[
+  {
+    "id": "7d9463c9-1b38-49d3-8c08-48f375ac5c4d",
+    "name": "Untitled Project",
+    "objective": "Define the outcome, key stages, and first linked tasks.",
+    "status": "idea",
+    "priority": "medium",
+    "owner": "Novak",
+    "startDate": "2026-08-13",
+    "dueDate": "2026-09-03",
+    "linkedTaskIds": [
+      "fb273478-4aba-4163-808b-2da005710a51"
+    ],
+    "tags": [
+      "Project"
+    ],
+    "notes": "",
+    "createdAt": "2026-08-13T14:30:45.047Z",
+    "updatedAt": "2026-08-13T14:52:08.039Z"
+  },
+  {
+    "id": "9e4f9303-7058-41bf-a32e-76fc1266f8ea",
+    "name": "Learning Progress System",
+    "objective": "Build a trackable technical learning routine with clear weekly output.",
+    "status": "active",
+    "priority": "high",
+    "owner": "Novak",
+    "startDate": "2026-08-13",
+    "dueDate": "2026-09-10",
+    "linkedTaskIds": [
+      "2fd21007-2973-4227-abca-ea961f4c2599"
+    ],
+    "tags": [
+      "Learning",
+      "Portfolio",
+      "Routine"
+    ],
+    "notes": "Use this project to coordinate CS, Python, SQL, algorithms, ML, and NLP progress.",
+    "createdAt": "2026-08-13T13:39:55.682Z",
+    "updatedAt": "2026-08-13T13:51:21.083Z"
+  },
+  {
+    "id": "35e45a72-0ad2-4f8e-a0e7-f4d59ba64559",
+    "name": "General Project Pipeline",
+    "objective": "Manage reusable work that needs planning, execution, review, and delivery.",
+    "status": "idea",
+    "priority": "medium",
+    "owner": "Novak",
+    "startDate": "2026-08-14",
+    "dueDate": "2026-09-27",
+    "linkedTaskIds": [
+      "4ce312e8-1cb3-4950-a9df-20caa3ad90b6",
+      "b839d698-2905-4f25-8209-23c49f684df6",
+      "b9b17e84-9adc-4470-ac75-5d6b12208be8",
+      "2dac9425-a3cd-42f1-bac1-a5431331cb00",
+      "68e8a85e-6f90-4518-b22d-9fff3e014403"
+    ],
+    "tags": [
+      "Project",
+      "Planning"
+    ],
+    "notes": "Keep this generic so it can support internship preparation, coursework, product work, or personal projects.",
+    "createdAt": "2026-08-13T13:39:55.682Z",
+    "updatedAt": "2026-08-13T13:39:55.682Z"
+  }
+]

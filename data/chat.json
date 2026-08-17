@@ -1,0 +1,17 @@
+[
+  {
+    "id": "b7584978-38d0-4e20-adb5-2259b7f87714",
+    "role": "user",
+    "content": "Give me one short planning tip.",
+    "mode": "coach",
+    "taskId": null,
+    "createdAt": "2026-07-30T15:09:08.124Z"
+  },
+  {
+    "role": "assistant",
+    "content": "Plan the next **25 minutes**, not the whole project.\n\nPick one concrete output, like “finish 3 flashcards” or “solve 2 practice questions,” then stop when that output is done.\n\nNext practice step: write one sentence starting with “In the next 25 minutes, I will…”",
+    "provider": "terminal-codex",
+    "id": "4982f409-64b8-4f8a-acee-f846c9530491",
+    "createdAt": "2026-07-30T15:09:16.736Z"
+  }
+]
