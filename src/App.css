@@ -5101,3 +5101,358 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Multi-page shell ===== */
+.appShell.noDetail {
+  grid-template-columns: 258px minmax(0, 1fr);
+}
+
+.appShell.noDetail.navCollapsed {
+  grid-template-columns: 58px minmax(0, 1fr);
+}
+
+.pageBody {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  min-width: 0;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pageHeader h2 {
+  margin: 2px 0 0;
+  font-size: 20px;
+}
+
+.pageHeader p {
+  margin: 4px 0 0;
+  color: var(--color-text-3, #86909c);
+  font-size: 13px;
+}
+
+.pageHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.subNav {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  border-radius: 8px;
+  background: var(--color-fill-2, #f2f3f5);
+}
+
+.subNav button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--color-text-2, #4e5969);
+  cursor: pointer;
+}
+
+.subNav button:hover {
+  color: var(--color-text-1, #1d2129);
+}
+
+.subNav button.active {
+  background: var(--color-bg-2, #fff);
+  color: var(--color-text-1, #1d2129);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.tasksToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filterToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--color-border-2, #e5e6eb);
+  background: var(--color-bg-2, #fff);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filterCount {
+  min-width: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: rgb(var(--primary-6, 22, 93, 255));
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.filterChevron {
+  transition: transform 0.15s ease;
+}
+
+.filterChevron.expanded {
+  transform: rotate(180deg);
+}
+
+.clearFiltersButton {
+  border: 0;
+  background: transparent;
+  color: rgb(var(--primary-6, 22, 93, 255));
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.templateCenter {
+  display: grid;
+  gap: 12px;
+}
+
+.templateCenterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.templateCenterHeader h3 {
+  margin: 0;
+}
+
+.templateSearch {
+  max-width: 280px;
+}
+
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.templateCard {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+  border: 1px solid var(--color-border-2, #e5e6eb);
+  background: var(--color-bg-2, #fff);
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.templateCard:hover {
+  border-color: rgb(var(--primary-6, 22, 93, 255));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.templateCard span,
+.templateCard small {
+  color: var(--color-text-3, #86909c);
+}
+
+.settingsPanel.page {
+  width: 100%;
+  height: auto;
+  min-height: 520px;
+  box-shadow: none;
+  border: 1px solid var(--color-border-2, #e5e6eb);
+  border-radius: 8px;
+}
+
+.settingsAudit {
+  min-width: 0;
+}
+
+.assistantPanel.assistantPanelPage {
+  width: 100%;
+  height: calc(100vh - 120px);
+  box-shadow: none;
+  border: 1px solid var(--color-border-2, #e5e6eb);
+  border-radius: 8px;
+}
+
+.scopeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--color-border-2, #e5e6eb);
+  background: var(--color-fill-2, #f2f3f5);
+  border-radius: 12px;
+  padding: 2px 10px;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.quickAddModal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quickAddModal label {
+  display: grid;
+  gap: 4px;
+}
+
+.quickAddModal label:first-child {
+  grid-column: 1 / -1;
+}
+
+.quickAddModal label > span {
+  font-size: 12px;
+  color: var(--color-text-3, #86909c);
+}
+
+@media (max-width: 1240px) {
+  .appShell.noDetail {
+    grid-template-columns: 230px minmax(0, 1fr);
+  }
+
+  .appShell.noDetail.navCollapsed {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .appShell.noDetail,
+  .appShell.noDetail.navCollapsed {
+    grid-template-columns: 1fr;
+  }
+
+  .quickAddModal {
+    grid-template-columns: 1fr;
+  }
+
+  .assistantPanel.assistantPanelPage {
+    width: 100%;
+  }
+}
+
+/* Tablet width: keep a narrow side rail instead of stacking the nav above the page */
+@media (min-width: 601px) and (max-width: 900px) {
+  .appShell,
+  .appShell.detailCollapsed,
+  .appShell.navCollapsed,
+  .appShell.navCollapsed.detailCollapsed,
+  .appShell.noDetail,
+  .appShell.noDetail.navCollapsed {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .appShell > .sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    min-height: 0;
+    overflow: hidden auto;
+    border-width: 0 1px 0 0;
+    padding: 16px 8px;
+    gap: 12px;
+    align-items: center;
+  }
+
+  /* Icon-only rail: hide every text label, keep the nav itself (even when "collapsed") */
+  .appShell > .sidebar .brandCopy,
+  .appShell > .sidebar .sectionLabel,
+  .appShell > .sidebar .sidebarEdgeToggle,
+  .appShell > .sidebar .pageNav button > span {
+    display: none;
+  }
+
+  .appShell > .sidebar .sidebarContent {
+    display: grid;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .appShell > .sidebar .pageNav button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    padding: 0;
+  }
+}
+
+/* ---------- Import wizard ---------- */
+.importWizard { display: flex; flex-direction: column; gap: 14px; }
+.importStep { display: flex; flex-direction: column; gap: 8px; padding: 12px; border: 1px solid var(--color-border-2, #e5e6eb); border-radius: 8px; }
+.importStep h4 { margin: 0; font-size: 13px; }
+.importSourceRow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.importTemplates { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-text-3, #86909c); }
+.importMeta { font-size: 12px; color: var(--color-text-3, #86909c); margin: 0; }
+.importError { color: #f53f3f; font-size: 12px; margin: 0; }
+.importMapping { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 6px 16px; }
+.importMapping label { display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: center; gap: 6px; font-size: 12px; min-width: 0; }
+.importMapping label > *:last-child { min-width: 0; width: 100% !important; }
+.importMapping label span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.importToggle { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
+.importPreviewTable { max-height: 280px; overflow: auto; border: 1px solid var(--color-border-2, #e5e6eb); border-radius: 6px; }
+.importPreviewTable table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.importPreviewTable th, .importPreviewTable td { padding: 4px 8px; border-bottom: 1px solid var(--color-border-1, #f2f3f5); text-align: left; white-space: nowrap; }
+.importPreviewTable th { position: sticky; top: 0; background: var(--color-bg-2, #fff); }
+.importIssues { margin: 0; padding-left: 18px; max-height: 140px; overflow: auto; font-size: 12px; }
+.importIssues .error { color: #f53f3f; }
+.importIssues .warning { color: #d25f00; }
+.importSpecEditor textarea { font-family: Consolas, monospace; font-size: 12px; }
+.importFooter { display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+.importFooter span { margin-right: auto; font-size: 12px; color: var(--color-text-3, #86909c); }
+
+/* ---- Insights v2 ---- */
+.insightRange { flex-shrink: 0; }
+.insightScopeNote { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; padding: 8px 12px; border: 1px dashed #dee0e3; border-radius: 8px; background: #fff; font-size: 12px; color: #646a73; }
+.insightScopeNote button { border: 0; background: none; padding: 0; color: #3370ff; cursor: pointer; font-size: 12px; }
+.insightScopeNote button:hover { text-decoration: underline; }
+.chartCardInteractive canvas { cursor: pointer; }
+.chartCardInteractive:hover { border-color: #bacefd; }
+.attentionCard { display: grid; grid-template-rows: auto 1fr; }
+.attentionList { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; max-height: 260px; overflow: auto; align-content: start; grid-auto-rows: max-content; }
+.attentionList button { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 10px; border: 1px solid #eff0f1; border-radius: 8px; background: #fff; text-align: left; cursor: pointer; font: inherit; }
+.attentionList button:hover, .attentionList button:focus-visible { border-color: #bacefd; background: #f5f8ff; outline: none; }
+.attentionMain { display: grid; min-width: 0; gap: 2px; }
+.attentionMain strong { overflow: hidden; font-size: 13px; font-weight: 600; color: #1f2329; text-overflow: ellipsis; white-space: nowrap; }
+.attentionMain small { color: #8f959e; font-size: 12px; }
+.attentionMeta { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.attentionMeta em { min-width: 34px; font-size: 12px; font-style: normal; color: #646a73; text-align: right; }
+.attentionEmpty { display: grid; place-items: center; min-height: 120px; color: #8f959e; font-size: 13px; }
+.chartFooter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: 8px; padding-top: 10px; border-top: 1px solid #eff0f1; font-size: 12px; color: #646a73; }
+.chartFooter b { color: #1f2329; }
+.chartFooterWarn b { color: #f77234; }
+.capacityInput { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.capacityInput .arco-input-number { width: 92px; }
+@media (max-width: 1280px) {
+  .chartKpiGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .chartKpiGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chartGrid { grid-template-columns: 1fr; }
+}

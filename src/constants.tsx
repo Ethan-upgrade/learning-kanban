@@ -9,6 +9,10 @@ import type {
   Priority,
   ProjectStatus,
   Status,
+  InsightsSection,
+  RouteState,
+  SettingsSectionKey,
+  TaskSubView,
   TemplateId,
   ViewKey,
 } from './types'
@@ -30,16 +34,58 @@ export const defaultSettings: AppSettings = {
   automationNotificationsEnabled: true,
   launchAtStartup: false,
   confirmDestructiveActions: true,
-  defaultView: 'overview',
+  defaultView: 'today',
   interfaceDensity: 'comfortable',
   weekStartsOn: 'Monday',
 }
 
-export const viewKeys: ViewKey[] = ['overview', 'projects', 'base', 'knowledge', 'audit', 'board', 'automations', 'table', 'charts', 'process']
+export const viewKeys: ViewKey[] = ['today', 'tasks', 'planning', 'insights', 'projects', 'base', 'knowledge', 'automations', 'assistant', 'settings']
 
-export const normalizeViewKey = (value?: string | null): ViewKey | null => {
-  if (value === 'gantt') return 'charts'
-  return value && viewKeys.includes(value as ViewKey) ? value as ViewKey : null
+export const taskSubViews: TaskSubView[] = ['board', 'table', 'process']
+export const insightsSections: InsightsSection[] = ['overview', 'progress', 'workload', 'distribution', 'schedule']
+export const settingsSectionKeys: SettingsSectionKey[] = ['general', 'notifications', 'startup', 'data', 'appearance', 'audit', 'guide', 'about']
+
+/** Maps legacy view keys (pre multi-page) onto the new route model. */
+export const legacyRoute = (value?: string | null): RouteState | null => {
+  if (!value) return null
+  if (viewKeys.includes(value as ViewKey)) return { view: value as ViewKey }
+  switch (value) {
+    case 'overview': return { view: 'today' }
+    case 'board':
+    case 'table':
+    case 'process': return { view: 'tasks', taskView: value }
+    case 'gantt': return { view: 'planning' }
+    case 'charts': return { view: 'insights' }
+    case 'audit': return { view: 'settings', settingsSection: 'audit' }
+    default: return null
+  }
+}
+
+export const normalizeViewKey = (value?: string | null): ViewKey | null => legacyRoute(value)?.view ?? null
+
+export const readRouteFromUrl = (fallback: ViewKey): Required<RouteState> => {
+  const params = new URLSearchParams(window.location.search)
+  const base = legacyRoute(params.get('view')) ?? (params.has('settings') ? { view: 'settings' as ViewKey } : { view: fallback })
+  const tab = params.get('tab')
+  const section = params.get('settingsSection') ?? params.get('section')
+  return {
+    view: base.view,
+    taskView: base.taskView ?? (taskSubViews.includes(tab as TaskSubView) ? tab as TaskSubView : 'board'),
+    insights: insightsSections.includes(tab as InsightsSection) ? tab as InsightsSection : 'overview',
+    settingsSection: base.settingsSection ?? (settingsSectionKeys.includes(section as SettingsSectionKey) ? section as SettingsSectionKey : 'general'),
+  }
+}
+
+export const writeRouteToUrl = (route: Required<RouteState>) => {
+  const params = new URLSearchParams()
+  params.set('view', route.view)
+  if (route.view === 'tasks') params.set('tab', route.taskView)
+  if (route.view === 'insights') params.set('tab', route.insights)
+  if (route.view === 'settings') params.set('section', route.settingsSection)
+  const next = `${window.location.pathname}?${params.toString()}${window.location.hash}`
+  if (next !== `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+    window.history.replaceState(null, '', next)
+  }
 }
 
 export const statusMeta: Record<Status, { title: string; hint: string; color: string }> = {

@@ -32,6 +32,7 @@ export function ChartCard({
   height = 280,
   className,
   children,
+  onEvents,
 }: {
   title: string
   subtitle?: string
@@ -39,14 +40,17 @@ export function ChartCard({
   height?: number
   className?: string
   children?: ReactNode
+  /** ECharts event handlers, e.g. `{ click: (params) => … }`. Makes the card look clickable. */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onEvents?: Record<string, (params: any) => void>
 }) {
   return (
-    <article className={clsx('chartCard', className)}>
+    <article className={clsx('chartCard', onEvents && 'chartCardInteractive', className)}>
       <div className="chartCardHeader">
         <h3>{title}</h3>
         {subtitle && <span>{subtitle}</span>}
       </div>
-      <ReactECharts option={option} style={{ height }} />
+      <ReactECharts option={option} style={{ height }} onEvents={onEvents} notMerge />
       {children}
     </article>
   )

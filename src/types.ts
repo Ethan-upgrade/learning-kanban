@@ -4,16 +4,25 @@ export type Status = 'backlog' | 'week' | 'doing' | 'review' | 'done'
 export type Priority = 'high' | 'medium' | 'low'
 export type ChatMode = 'coach' | 'explain' | 'quiz' | 'review'
 export type ViewKey =
-  | 'overview'
+  | 'today'
+  | 'tasks'
+  | 'planning'
+  | 'insights'
   | 'projects'
   | 'base'
   | 'knowledge'
-  | 'audit'
-  | 'board'
   | 'automations'
-  | 'table'
-  | 'charts'
-  | 'process'
+  | 'assistant'
+  | 'settings'
+export type TaskSubView = 'board' | 'table' | 'process'
+export type InsightsSection = 'overview' | 'progress' | 'workload' | 'distribution' | 'schedule'
+export type SettingsSectionKey = 'general' | 'notifications' | 'startup' | 'data' | 'appearance' | 'audit' | 'guide' | 'about'
+export type RouteState = {
+  view: ViewKey
+  taskView?: TaskSubView
+  insights?: InsightsSection
+  settingsSection?: SettingsSectionKey
+}
 export type TemplateId = 'study' | 'project' | 'coursework' | 'daily'
 export type ProjectStatus = 'idea' | 'active' | 'blocked' | 'review' | 'done'
 export type BaseRecordStatus = 'wishlist' | 'applied' | 'written' | 'interview' | 'offer' | 'rejected' | 'archived'
@@ -48,6 +57,8 @@ export type Task = {
   checklist: ChecklistItem[]
   createdAt: string
   remindedAt?: string
+  /** Custom task color (#RRGGBB). Undefined = derived from area. */
+  color?: string
 }
 
 export type Note = {

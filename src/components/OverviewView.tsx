@@ -1,11 +1,11 @@
 import { Empty, Progress, Tag } from '@arco-design/web-react'
-import { CheckCircle2, Database, ListFilter, Network, PanelRightOpen, Target, Workflow } from 'lucide-react'
+import { PanelRightOpen } from 'lucide-react'
 import clsx from 'clsx'
 import { columns, priorityMeta, statusMeta } from '../constants'
 import { dueLabel, getRiskScore, getTaskProgress, riskClass } from '../utils'
 import { sumBy } from './chartBuilders'
 import { PanelTitle } from './common'
-import type { Priority, Task, ViewKey } from '../types'
+import type { Priority, Task } from '../types'
 
 export function OverviewView({
   tasks,
@@ -15,8 +15,6 @@ export function OverviewView({
   dueSoonCount,
   weightedProgress,
   setSelectedId,
-  onNavigate,
-  summary,
 }: {
   tasks: Task[]
   totalTasks: number
@@ -25,14 +23,6 @@ export function OverviewView({
   dueSoonCount: number
   weightedProgress: number
   setSelectedId: (id: string) => void
-  onNavigate: (view: ViewKey) => void
-  summary: {
-    taskCount: number
-    projectCount: number
-    baseRecordCount: number
-    noteCount: number
-    automationCount: number
-  }
 }) {
   const focusTasks = [...tasks]
     .filter((task) => task.status !== 'done')
@@ -72,24 +62,6 @@ export function OverviewView({
           </div>
         </div>
       </div>
-
-      <section className="workspaceDirectory">
-        {[
-          { key: 'board' as ViewKey, title: 'Tasks', subtitle: 'Board, table, timeline', count: summary.taskCount, icon: <ListFilter size={18} /> },
-          { key: 'projects' as ViewKey, title: 'Projects', subtitle: 'Portfolio planning', count: summary.projectCount, icon: <Target size={18} /> },
-          { key: 'base' as ViewKey, title: 'Base', subtitle: 'Multiview records', count: summary.baseRecordCount, icon: <Database size={18} /> },
-          { key: 'knowledge' as ViewKey, title: 'Knowledge', subtitle: 'Notes and graph', count: summary.noteCount, icon: <Network size={18} /> },
-          { key: 'automations' as ViewKey, title: 'Automations', subtitle: 'Rules and logs', count: summary.automationCount, icon: <Workflow size={18} /> },
-          { key: 'audit' as ViewKey, title: 'Audit', subtitle: 'Health and UX checks', count: overdueCount + dueSoonCount, icon: <CheckCircle2 size={18} /> },
-        ].map((item) => (
-          <button type="button" key={item.key} onClick={() => onNavigate(item.key)}>
-            <span>{item.icon}</span>
-            <strong>{item.title}</strong>
-            <small>{item.subtitle}</small>
-            <b>{item.count}</b>
-          </button>
-        ))}
-      </section>
 
       <div className="overviewGrid">
         <section className="managementPanel focusPanel">

@@ -28,7 +28,8 @@
         "done": false
       }
     ],
-    "createdAt": "2026-08-14T07:29:02.071Z"
+    "createdAt": "2026-08-14T07:29:02.071Z",
+    "remindedAt": "2026-10-10T00:15:59.797Z"
   },
   {
     "id": "4adfc320-6833-4312-a91e-a8a481e96273",
@@ -48,7 +49,8 @@
     ],
     "notes": "Collect readings, exercises, videos, and notes.",
     "checklist": [],
-    "createdAt": "2026-08-14T07:29:02.071Z"
+    "createdAt": "2026-08-14T07:29:02.071Z",
+    "remindedAt": "2026-10-10T00:15:59.797Z"
   },
   {
     "id": "38bbe8ca-6b7b-4e6d-b6a4-fd5b67269181",
@@ -84,7 +86,8 @@
         "done": false
       }
     ],
-    "createdAt": "2026-08-14T07:29:02.071Z"
+    "createdAt": "2026-08-14T07:29:02.071Z",
+    "remindedAt": "2026-10-10T00:15:59.797Z"
   },
   {
     "id": "e0cb34d0-ca51-41a4-b0c7-e83200a34dfc",
@@ -104,7 +107,8 @@
     ],
     "notes": "Record errors, blockers, and corrected understanding.",
     "checklist": [],
-    "createdAt": "2026-08-14T07:29:02.071Z"
+    "createdAt": "2026-08-14T07:29:02.071Z",
+    "remindedAt": "2026-10-10T00:15:59.797Z"
   },
   {
     "id": "2fd21007-2973-4227-abca-ea961f4c2599",

@@ -10,6 +10,7 @@ import {
   projectStatuses,
 } from '../constants'
 import { datePlus, getProjectProgress, getProjectTasks, getRiskLevel, getTaskProgress } from '../utils'
+import { resolveTaskColor, withAlpha } from '../colors'
 import { parseWikiLinks } from './markdown'
 import type { BaseRecord, BaseRecordPriority, ManagedProject, Note, Priority, Task } from '../types'
 
@@ -328,8 +329,9 @@ export function buildTimelineOption(tasks: Task[]) {
   const sorted = [...tasks].sort((a, b) => a.startDate.localeCompare(b.startDate))
   const minDate = sorted[0]?.startDate || datePlus(0)
   const maxDate = sorted.reduce((latest, task) => task.dueDate > latest ? task.dueDate : latest, sorted[0]?.dueDate || datePlus(7))
+  const taskColors = sorted.map((task) => resolveTaskColor(task))
   return {
-    color: ['#165dff'],
+    color: ['#3370ff'],
     tooltip: {
       formatter: (params: any) => {
         const task = sorted[params.dataIndex]
@@ -343,6 +345,7 @@ export function buildTimelineOption(tasks: Task[]) {
       type: 'custom',
       renderItem: (_params: any, api: any) => {
         const categoryIndex = api.value(0)
+        const color = taskColors[categoryIndex] ?? '#3370ff'
         const start = api.coord([api.value(1), categoryIndex])
         const end = api.coord([api.value(2), categoryIndex])
         const height = Math.min(22, api.size([0, 1])[1] * 0.62)
@@ -351,8 +354,8 @@ export function buildTimelineOption(tasks: Task[]) {
         return {
           type: 'group',
           children: [
-            { type: 'rect', shape: rect, style: api.style({ fill: '#dbeafe' }) },
-            { type: 'rect', shape: { ...rect, width: progressWidth }, style: api.style({ fill: '#165dff' }) },
+            { type: 'rect', shape: { ...rect, r: 4 }, style: api.style({ fill: withAlpha(color, 0.22), stroke: color, lineWidth: 1 }) },
+            { type: 'rect', shape: { ...rect, width: progressWidth, r: 4 }, style: api.style({ fill: color }) },
           ],
         }
       },

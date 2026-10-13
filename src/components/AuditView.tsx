@@ -76,7 +76,7 @@ export function AuditView({
       status: tasks.length ? 'Pass' : 'Review',
       detail: tasks.length ? 'Task cards, focus rows, table rows, linked tasks, and timeline rows open the detail panel.' : 'Create a task to test detail flow.',
       action: 'Open Tasks',
-      onClick: () => onNavigate('board'),
+      onClick: () => onNavigate('tasks'),
     },
     {
       title: 'Reminders',

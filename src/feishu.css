@@ -1,0 +1,352 @@
+/*
+ * Feishu (Lark) inspired visual layer.
+ * Loaded after App.css. Only colours, borders, radii and small decorations are
+ * overridden here — grid column widths / media-query layouts stay in App.css.
+ */
+
+:root {
+  --fs-primary: #3370ff;
+  --fs-primary-hover: #4e83fd;
+  --fs-primary-active: #245bdb;
+  --fs-primary-light: #e1eaff;
+  --fs-primary-lighter: #f0f4ff;
+  --fs-text-title: #1f2329;
+  --fs-text-body: #1f2329;
+  --fs-text-caption: #646a73;
+  --fs-text-placeholder: #8f959e;
+  --fs-border: #dee0e3;
+  --fs-border-light: #e8e9eb;
+  --fs-bg-body: #f5f6f7;
+  --fs-bg-panel: #ffffff;
+  --fs-fill-hover: rgba(31, 35, 41, 0.08);
+  --fs-radius-sm: 4px;
+  --fs-radius: 6px;
+  --fs-radius-lg: 8px;
+  --fs-shadow-card: 0 1px 2px rgba(31, 35, 41, 0.06);
+  --fs-shadow-hover: 0 4px 12px rgba(31, 35, 41, 0.1);
+}
+
+/* ---------- Shell ---------- */
+
+.appShell {
+  background: var(--fs-bg-body);
+  color: var(--fs-text-body);
+}
+
+.sidebar {
+  background: #f7f8fa;
+  border-right: 1px solid var(--fs-border-light);
+}
+
+.brandIcon {
+  background: var(--fs-primary);
+  color: #fff;
+}
+
+.sectionLabel {
+  color: var(--fs-text-placeholder);
+}
+
+/* Feishu nav: light-blue pill for active entry */
+.pageNav button {
+  border-radius: var(--fs-radius);
+  color: var(--fs-text-body);
+}
+
+.pageNav button:hover {
+  color: var(--fs-text-body);
+  background: var(--fs-fill-hover);
+}
+
+.pageNav button.active {
+  color: var(--fs-primary);
+  background: var(--fs-primary-light);
+  box-shadow: none;
+}
+
+.pageNav button.active small {
+  color: rgba(51, 112, 255, 0.75);
+}
+
+.pageNav small {
+  color: var(--fs-text-placeholder);
+}
+
+/* ---------- Top bar / page header ---------- */
+
+.topbar,
+.pageHeader {
+  border-bottom-color: var(--fs-border-light);
+}
+
+.topbar h1,
+.pageHeader h1,
+.pageHeader h2 {
+  color: var(--fs-text-title);
+}
+
+.eyebrow {
+  color: var(--fs-text-caption);
+}
+
+.searchBox {
+  border: 1px solid var(--fs-border);
+  border-radius: var(--fs-radius);
+  background: var(--fs-bg-panel);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.searchBox:focus-within {
+  border-color: var(--fs-primary);
+  box-shadow: 0 0 0 2px rgba(51, 112, 255, 0.15);
+}
+
+.searchBox input::placeholder {
+  color: var(--fs-text-placeholder);
+}
+
+.scopeChip {
+  border-radius: var(--fs-radius);
+  border-color: var(--fs-border);
+}
+
+/* Arco primary buttons -> Feishu blue */
+.arco-btn-primary:not(.arco-btn-disabled) {
+  background-color: var(--fs-primary);
+}
+
+.arco-btn-primary:not(.arco-btn-disabled):hover {
+  background-color: var(--fs-primary-hover);
+}
+
+.arco-btn-primary:not(.arco-btn-disabled):active {
+  background-color: var(--fs-primary-active);
+}
+
+.arco-btn {
+  border-radius: var(--fs-radius);
+}
+
+/* ---------- Task cards ---------- */
+
+.taskCard {
+  --task-color: #3370ff;
+  --task-tint: rgba(51, 112, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--fs-border-light);
+  border-radius: var(--fs-radius-lg);
+  padding-left: 16px;
+  box-shadow: var(--fs-shadow-card);
+  transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
+}
+
+.taskCard::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--task-color);
+}
+
+.taskCard:hover {
+  border-color: var(--task-color);
+  box-shadow: var(--fs-shadow-hover);
+}
+
+.taskCard.selected {
+  border-color: var(--task-color);
+  background: var(--task-tint);
+  box-shadow: 0 0 0 1px var(--task-color);
+}
+
+.taskCard.customColor {
+  background: linear-gradient(90deg, var(--task-tint), #fff 60%);
+}
+
+.taskCard.customColor.selected {
+  background: var(--task-tint);
+}
+
+.areaChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 6px;
+  border-radius: var(--fs-radius-sm);
+  background: var(--task-tint, var(--fs-primary-light));
+  color: var(--task-color, var(--fs-primary));
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* ---------- Detail panel ---------- */
+
+.detailHeader {
+  color: var(--task-color, var(--fs-primary));
+}
+
+.detailAreaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detailAreaBadge i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--task-color, var(--fs-primary));
+}
+
+/* ---------- Colour picker ---------- */
+
+.colorPicker {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--fs-border-light);
+  border-radius: var(--fs-radius-lg);
+  background: #fafbfc;
+}
+
+.colorPicker.compact {
+  margin-top: 4px;
+  padding: 10px;
+  gap: 8px;
+}
+
+.colorPickerHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.colorPickerLabel {
+  color: var(--fs-text-caption);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.colorPickerValue {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fs-text-body);
+  font-size: 12px;
+}
+
+.colorPickerValue i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--swatch);
+}
+
+.colorSwatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.colorSwatch {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  min-height: 0;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--fs-radius);
+  background: var(--swatch, #fff);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(31, 35, 41, 0.08);
+  transition: transform 0.1s, border-color 0.1s;
+}
+
+.colorSwatch:hover {
+  transform: scale(1.1);
+}
+
+.colorSwatch.active {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px var(--swatch, var(--fs-primary));
+}
+
+.colorSwatch.autoSwatch {
+  color: var(--fs-text-caption);
+  background: #fff;
+  border: 1px dashed var(--fs-border);
+}
+
+.colorSwatch.autoSwatch.active {
+  border: 1px solid var(--fs-primary);
+  color: var(--fs-primary);
+  box-shadow: 0 0 0 1px var(--fs-primary);
+}
+
+.colorSwatch.customSwatch {
+  overflow: hidden;
+  background: conic-gradient(#f54a45, #ffc60a, #34c724, #14c0ff, #3370ff, #d136d1, #f54a45);
+}
+
+.colorSwatch.customSwatch.active {
+  background: var(--swatch);
+}
+
+.colorSwatch.customSwatch input[type='color'] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.colorHexRow {
+  display: inline-flex;
+  align-items: center;
+  width: 128px;
+  height: 28px;
+  border: 1px solid var(--fs-border);
+  border-radius: var(--fs-radius);
+  background: #fff;
+  overflow: hidden;
+}
+
+.colorHexRow:focus-within {
+  border-color: var(--fs-primary);
+}
+
+.colorHexRow span {
+  padding: 0 6px;
+  color: var(--fs-text-placeholder);
+  font-size: 12px;
+}
+
+.colorHexRow input {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  padding: 0 6px 0 0;
+  border: 0;
+  outline: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.colorDot {
+  display: inline-block;
+  flex: none;
+  border-radius: 3px;
+  background: var(--swatch, var(--fs-primary));
+  vertical-align: middle;
+}

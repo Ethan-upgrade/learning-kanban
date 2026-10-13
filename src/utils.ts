@@ -1,4 +1,5 @@
 import { differenceInCalendarDays, format, isToday, parseISO, subDays } from 'date-fns'
+import { normalizeHexColor } from './colors'
 import {
   AUTOMATIONS_STORAGE_KEY,
   AUTOMATION_LOGS_STORAGE_KEY,
@@ -726,6 +727,7 @@ export const normalizeTask = (task: Partial<Task> & { id: string; title: string 
     checklist: task.checklist || [],
     createdAt: task.createdAt || new Date().toISOString(),
     remindedAt: task.remindedAt,
+    color: normalizeHexColor(task.color),
   }
 }
 
@@ -795,6 +797,7 @@ export const defaultDraft = () => ({
   priority: 'medium' as Priority,
   estimateHours: 2,
   tags: '',
+  color: '' as string,
 })
 
 export const dueLabel = (date: string) => {

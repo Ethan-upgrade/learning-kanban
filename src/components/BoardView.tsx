@@ -5,6 +5,8 @@ import clsx from 'clsx'
 import { columns, priorityMeta } from '../constants'
 import { dueLabel, getTaskProgress, reminderLabel } from '../utils'
 import type { Task } from '../types'
+import { resolveTaskColor, withAlpha } from '../colors'
+import { cssVars } from '../cssVars'
 
 export function BoardView({
   filteredTasks,
@@ -44,20 +46,27 @@ export function BoardView({
                   <div className="cardStack">
                     {columnTasks.map((task, index) => (
                       <Draggable draggableId={task.id} index={index} key={task.id}>
-                        {(dragProvided, dragSnapshot) => (
-                          <button type="button" className={clsx('taskCard', selectedTask?.id === task.id && 'selected', dragSnapshot.isDragging && 'dragging')} ref={dragProvided.innerRef} {...dragProvided.draggableProps} {...dragProvided.dragHandleProps} onClick={() => setSelectedId(task.id)}>
+                        {(dragProvided, dragSnapshot) => {
+                          const taskColor = resolveTaskColor(task)
+                          const cardStyle = cssVars(
+                            { '--task-color': taskColor, '--task-tint': withAlpha(taskColor, 0.1) },
+                            dragProvided.draggableProps.style,
+                          )
+                          return (
+                          <button type="button" className={clsx('taskCard', task.color && 'customColor', selectedTask?.id === task.id && 'selected', dragSnapshot.isDragging && 'dragging')} ref={dragProvided.innerRef} {...dragProvided.draggableProps} {...dragProvided.dragHandleProps} style={cardStyle} onClick={() => setSelectedId(task.id)}>
                             <div className="cardTop">
                               <span className={clsx('priority', priorityMeta[task.priority].className)}>{priorityMeta[task.priority].label}</span>
                               <span className="dueText">{dueLabel(task.dueDate)}</span>
                             </div>
                             <h3>{task.title}</h3>
                             <span className="cardDetailIcon" aria-hidden="true"><PanelRightOpen size={15} /></span>
-                            <p>{task.area} · {task.startDate} to {task.dueDate}</p>
+                            <p><span className="areaChip">{task.area}</span> {task.startDate} to {task.dueDate}</p>
                             <div className="reminderLine"><Bell size={13} />{reminderLabel(task.reminderAt)}</div>
                             <div className="progressTrack"><span style={{ width: `${getTaskProgress(task)}%` }} /></div>
                             <div className="tagRow">{task.tags.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}</div>
                           </button>
-                        )}
+                          )
+                        }}
                       </Draggable>
                     ))}
                     {provided.placeholder}

@@ -3,6 +3,9 @@ import { BookOpen, CheckCircle2, PanelRightClose, PanelRightOpen, Plus } from 'l
 import { columns } from '../constants'
 import { getProgressReason, getTaskProgress } from '../utils'
 import type { Priority, Status, Task } from '../types'
+import { areaColor, resolveTaskColor } from '../colors'
+import { ColorPicker } from './ColorPicker'
+import { cssVars } from '../cssVars'
 
 export function TaskDetail({
   selectedTask,
@@ -50,8 +53,8 @@ export function TaskDetail({
       </Tooltip>
       {selectedTask ? (
         <>
-          <div className="detailHeader">
-            <span>{selectedTask.area}</span>
+          <div className="detailHeader" style={cssVars({ '--task-color': resolveTaskColor(selectedTask) })}>
+            <span className="detailAreaBadge"><i />{selectedTask.area}</span>
             <div className="detailHeaderActions">
               <CheckCircle2 size={20} />
             </div>
@@ -84,6 +87,11 @@ export function TaskDetail({
               <input type="number" min={0.5} step={0.5} value={selectedTask.estimateHours} onChange={(event) => updateTask(selectedTask.id, { estimateHours: Number(event.target.value) })} />
             </label>
           </div>
+          <ColorPicker
+            value={selectedTask.color}
+            autoColor={areaColor(selectedTask.area)}
+            onChange={(color) => updateTask(selectedTask.id, { color })}
+          />
           <section className="computedProgress">
             <div>
               <strong>Auto progress</strong>
