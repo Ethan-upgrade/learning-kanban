@@ -1,21 +1,43 @@
-﻿# learning-kanban
+﻿# CJ Board — Learning & Task Kanban (learning-kanban)
 
-CJ Board: a learning and task kanban built with React, TypeScript, Vite and Tauri.
+A learning/task kanban built with **React + TypeScript + Vite + Tauri**, with a local Node service `server.cjs` and `data/` storage; runs as a desktop app.
 
-- **Language:** TypeScript
+## Features
+- Learning/task kanban board (columns / drag)
+- Desktop packaging via Tauri (`src-tauri/`)
+- Local service and launchers (`server.cjs`, `Open-CJBoard.cmd`, `Startup-CJBoard.cmd`)
 
-> English README. If a README.md exists in this repository, it contains the original-language details.
+## Tech Stack
+React 19 · TypeScript · Vite · Tauri · Node (server.cjs)
 
-## Overview
+## Architecture & Workflow
+```mermaid
+flowchart TD
+    UI[src/ React board] -->|read/write| S[server.cjs local service]
+    S --> D[(data/ local store)]
+    UI --> Tauri[src-tauri desktop shell]
+    Scripts[Open/Startup-CJBoard.cmd] --> UI
+```
 
-This repository: CJ Board: a learning and task kanban built with React, TypeScript, Vite and Tauri.
+## Project Structure
+```
+learning-kanban/
+├─ src/            # React frontend
+├─ src-tauri/      # Tauri desktop shell
+├─ server.cjs      # local service
+├─ data/           # data
+├─ scripts/
+├─ public/ assets/
+├─ package.json / vite.config.ts / tsconfig*.json
+└─ README.md / README_EN.md
+```
 
 ## Getting Started
-
-Clone the repository and follow the project's own instructions (see code, README.md, and language-specific setup files such as package.json, equirements.txt, or go.mod).
-
-    git clone https://github.com/Ethan-upgrade/learning-kanban.git
+```
+npm install
+npm run dev                 # browser dev
+# or double-click Open-CJBoard.cmd; desktop build via src-tauri
+```
 
 ## License
-
-See the repository for license information.
+See the repository.

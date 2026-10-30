@@ -1,32 +1,43 @@
-# React + TypeScript + Vite
+﻿# CJ Board 学习与任务管理看板（learning-kanban）
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+基于 **React + TypeScript + Vite + Tauri** 的学习/任务管理看板，含本地 Node 服务 `server.cjs` 与 `data/` 存储，可作为桌面应用运行。
 
-Currently, two official plugins are available:
+## 主要功能
+- 学习/任务看板（拖拽/分列）
+- 桌面应用封装（Tauri，`src-tauri/`）
+- 本地服务与启动脚本（`server.cjs`、`Open-CJBoard.cmd`、`Startup-CJBoard.cmd`）
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 技术栈
+React 19 · TypeScript · Vite · Tauri · Node(server.cjs)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## 架构与流程
+```mermaid
+flowchart TD
+    UI[src/ React 看板] -->|读写| S[server.cjs 本地服务]
+    S --> D[(data/ 本地存储)]
+    UI --> Tauri[src-tauri 桌面壳]
+    Scripts[Open/Startup-CJBoard.cmd] --> UI
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 项目结构
+```
+learning-kanban/
+├─ src/            # React 前端
+├─ src-tauri/      # Tauri 桌面壳
+├─ server.cjs      # 本地服务
+├─ data/           # 数据
+├─ scripts/        # 脚本
+├─ public/ assets/
+├─ package.json / vite.config.ts / tsconfig*.json
+└─ README.md / README_EN.md
+```
+
+## 快速开始
+```
+npm install
+npm run dev                 # 浏览器开发
+# 或双击 Open-CJBoard.cmd 启动；桌面构建见 src-tauri
+```
+
+## 许可证
+见仓库。
