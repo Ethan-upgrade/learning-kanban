@@ -1,4 +1,4 @@
-﻿# CJ Board — Study & Task Management Board
+# CJ Board — Study & Task Management Board
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
@@ -536,8 +536,9 @@ npm run dev
 npm run build
 npm run serve            # http://127.0.0.1:4173
 
-# 4. lint (the `test` script currently points at a file not in this tree)
+# 4. lint + tests
 npm run lint             # oxlint
+npm run test             # node:test suite for src/utils.ts
 
 # 5. desktop
 npm run setup-tauri      # install Rust + MSVC build tools once
@@ -559,7 +560,7 @@ otherwise the Tauri dev window.
 | `npm run preview` | Vite preview of `dist/` |
 | `npm run serve` | `node server.cjs` on port 4173 |
 | `npm run lint` | `oxlint` |
-| `npm run test` | `node --test scripts/import.test.ts` — **the file is not in this tree, so the script fails** |
+| `npm run test` | `tsx --tsconfig tsconfig.app.json --test scripts/utils.test.ts` — normalisers, progress/risk math, automation conditions and plan templates |
 | `npm run setup-tauri` | `scripts/install-tauri-prereqs.ps1` (Rust toolchain, MSVC) |
 | `npm run setup-desktop` | `scripts/setup-desktop.ps1` |
 | `npm run setup-cjboard` | `scripts/setup-cjboard-tauri.ps1` |
@@ -656,9 +657,10 @@ build the release binary before turning the toggle on.
   after frontend changes.
 - **Simulated agent fallback.** If Codex is absent, `buildTutorReply` produces a scripted
   coaching reply. It is not a language model — treat it as a template, not an answer.
-- **No tests for UI logic.** `package.json` declares `node --test scripts/import.test.ts`,
-  but that file is not present in this tree, so `npm run test` currently fails. Risk and
-  progress math has no coverage.
+- **Tests cover pure logic only.** `npm run test` runs `scripts/utils.test.ts` under
+  `node --test` (via `tsx`) against `src/utils.ts`: normalisers, progress and risk math,
+  automation conditions and the four plan templates. React components, `App.tsx` side
+  effects and `server.cjs` are still untested.
 
 ---
 

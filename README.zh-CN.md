@@ -527,8 +527,9 @@ npm run dev
 npm run build
 npm run serve            # http://127.0.0.1:4173
 
-# 4. 检查（注意：test 脚本指向的文件不在本仓库中）
+# 4. 检查与测试
 npm run lint             # oxlint
+npm run test             # src/utils.ts 的 node:test 用例
 
 # 5. 桌面
 npm run setup-tauri      # 一次性安装 Rust + MSVC 构建工具
@@ -549,7 +550,7 @@ Windows 快捷方式：双击 `Open-CJBoard.cmd`，存在 release 产物就启�
 | `npm run preview` | 预览 `dist/` |
 | `npm run serve` | `node server.cjs`，端口 4173 |
 | `npm run lint` | `oxlint` |
-| `npm run test` | `node --test scripts/import.test.ts` —— **该文件不在本仓库中，脚本会失败** |
+| `npm run test` | `tsx --tsconfig tsconfig.app.json --test scripts/utils.test.ts` —— 覆盖归一化、进度/风险计算、自动化条件与计划模板 |
 | `npm run setup-tauri` | `scripts/install-tauri-prereqs.ps1`（Rust 工具链、MSVC） |
 | `npm run setup-desktop` | `scripts/setup-desktop.ps1` |
 | `npm run setup-cjboard` | `scripts/setup-cjboard-tauri.ps1` |
@@ -641,8 +642,9 @@ Windows 快捷方式：双击 `Open-CJBoard.cmd`，存在 release 产物就启�
 - **`dist/` 已入库。** 服务端托管的是已提交的构建产物，改完前端记得重新构建。
 - **对话降级是模板。** 没有 Codex 时 `buildTutorReply` 返回脚本化内容，它不是语言模型产物，
   只能当模板看。
-- **UI 逻辑没有测试。** `package.json` 里声明了 `node --test scripts/import.test.ts`，但该文件
-  不在本仓库中，`npm run test` 目前会失败；风险与进度公式也没有覆盖。
+- **只覆盖纯逻辑测试。** `npm run test` 通过 `tsx` 以 `node --test` 运行
+  `scripts/utils.test.ts`，覆盖 `src/utils.ts` 的归一化、进度/风险计算、自动化条件与四套
+  计划模板。React 组件、`App.tsx` 副作用与 `server.cjs` 仍无测试。
 
 ---
 
